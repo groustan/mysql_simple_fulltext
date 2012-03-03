@@ -13,8 +13,9 @@ In your Gemfile
 == In your model
 
 Setup your fulltext search
-
-  search_with_simple_fulltext [:title, :content]
+  class Post < ActiveRecord::Base
+    search_with_simple_fulltext [:title, :content]
+  end
 
 Generate your migration file
 
