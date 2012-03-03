@@ -1,3 +1,27 @@
-= MysqlSimpleFulltext
+= Mysql Simple Fulltext
 
-This project rocks and uses MIT-LICENSE.
+MysqlSimpleFulltext lets you make simple MySQL fulltext searches a simple way without writing SQL queries in your ActiveRecord.
+
+== Getting started
+
+  gem install mysql_simple_fulltext
+
+In your Gemfile
+  
+  gem "mysql_simple_fulltext"
+
+== In your model
+
+Setup your fulltext search
+
+  search_with_simple_fulltext [:title, :content]
+
+Generate your migration file
+
+  rails generate mysql_symple_fulltext:migration Post
+
+  rake db:migrate
+
+Search !
+
+  Post.fulltext_search("Lorem Ipsum")

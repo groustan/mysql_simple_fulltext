@@ -1,0 +1,8 @@
+Description:
+    Generate MySQL FUlltext index migration
+
+Example:
+    rails generate mysql_simple_fulltext:migration Thing
+
+    This will create:
+        db/migrate/create_things_fulltext_index.rb
